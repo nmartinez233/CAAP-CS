@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 CAAP is pretty cool
+=======
+Nathaniel Martinez nmartinez23
+>>>>>>> b90525b464ddd6e202a593677be4b4347332fcad
 CAAP - Introduction to Software Development
 Git is pretty cool
 One more change
