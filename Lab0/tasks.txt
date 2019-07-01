@@ -5,3 +5,4 @@ Adding Task 8
 Task 6
 ------
 In order to find the difference in the file when compared to the previous commit, use git diff.
+Task 6: I used git --amend to change the commit message after I commited the original commit message
