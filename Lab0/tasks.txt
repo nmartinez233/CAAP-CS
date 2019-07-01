@@ -4,3 +4,4 @@ I went into the history of the commits where it showed all of the commits. From 
 Adding Task 8
 Task 6
 ------
+In order to find the difference in the file when compared to the previous commit, use git diff.
