@@ -8,3 +8,4 @@ In order to find the difference in the file when compared to the previous commit
 Task 6: I used git --amend to change the commit message after I commited the original commit message
 I used the rm command which removed the mistake.txt file from the directory
 Task 9
+Task 10: After I pushed the changes using 2 seperate commits, I used git revert in order to create a new commit that edits the files in the opposite way
