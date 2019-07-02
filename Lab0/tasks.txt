@@ -1,0 +1,10 @@
+Commit SHA c7e86ad4f1061b0cad9f64a6c9ad26f386bc1168
+Commit message: Add --no-mouse option to replace FZF_MOUSE_ENABLED
+I went into the history of the commits where it showed all of the commits. From there, I control + F mouse until I found the exact commit
+Adding Task 8
+Task 6
+------
+In order to find the difference in the file when compared to the previous commit, use git diff.
+Task 6: I used git --amend to change the commit message after I commited the original commit message
+I used the rm command which removed the mistake.txt file from the directory
+Task 9
