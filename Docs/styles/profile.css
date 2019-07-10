@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+/* Last edit: 2/18/2018 8:00 PM */
+/* Last validated error free: 2/18/2018 9:27 PM */
+
+/* Cite code */
+
+body{
+    background-color: lightblue;
+    text-align: center;
+    border-style: solid;
+    border-color: blue;
+    width: 1200px;
+    margin-left: 50px;
+    margin-bottom: 100px;
+    margin-top: 50px;
+    font-style: italic;
+    font-family: sans-serif
+}
+
+#Banner li {;
+    list-style:none;
+    margin-right:50px;
+    display: inline;      
+}
+
+nav{
+    border-color: aqua;
+    display:inline-block;
+    text-align: center;
+    background-color: lightgoldenrodyellow;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 14px;
+}
+.Education{
+    background-color: indianred
+}
