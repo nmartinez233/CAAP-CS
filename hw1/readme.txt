@@ -1,0 +1,1 @@
+There is a folder in the hw1 folder that contains all of my part 1 folder. From there, each individual file is a program that can be run from terminal using python3 _filename_.py. I am on python 3, so as a result you need to use python3 in order to run the programs
