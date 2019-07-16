@@ -1,0 +1,42 @@
+change =float(in:put("How much change do you have?"))
+qcount =0
+dcount =0
+ncount =0
+pcount =0
+coins =0
+if change/0.25 >= 1:
+	while change>=0.25:
+		change-=0.25
+		qcount+=1
+if (change+0.0001)/0.25>=1:
+	change-=0.25
+	qcount+=1
+if change/0.10 >= 1:
+	while change>=0.10:
+		change-=0.10
+		dcount+=1
+if (change+0.0001)/0.2>=1:
+        change-=0.2
+        dcount+=1
+if change/0.05 >= 1:
+	while change>=0.05:
+		change-=0.05
+		ncount+=1
+if (change+0.0001)/0.05>=1:
+        change-=0.05
+        qcount+=1
+if change/0.01 >= 1:
+	while change>=0.01:
+		change-=0.01
+		pcount+=1
+if (change+0.0001)/0.01>=1:
+        change-=0.01
+        qcount+=1
+coins+=qcount
+coins+=dcount
+coins+=ncount
+coins+=pcount
+if change<0.00001
+	change=0
+print(coins)
+print(change)
