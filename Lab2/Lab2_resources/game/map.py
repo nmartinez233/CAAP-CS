@@ -5,12 +5,14 @@ from death import Death
 # the map is created by the dictionary of scenes. If you add another parameter, 
 # you can probably add your own custom maps (as long as they somehow lead to end)?
 class Map(object):
-	scenes = {'central_corridor' : S.CentralCorridor(),
-				'laser_weapon_armory' : S.LaserWeaponArmory(),
-				'the_bridge' : S.TheBridge(),
-				'escape_pod' : S.EscapePod(),
+	scenes = {'starting_out' : S.StartingOut(),
+				'boat_dilemma' : S.BoatDillema(),
+				'capsize' : S.Capsize(),
+				'drinking_problems' : S.DrinkingProblems(),
+                'food_problems' : S.FoodProblems(),
+                'com_problems' : S.ComProblems(),
+                'climbing_problems' : S.ClimbingProblems(),
 				'death' : Death()
-				# raise ValueError ('todo')
 				}
 	
 	# initializes to a starting scene

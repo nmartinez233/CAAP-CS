@@ -15,7 +15,7 @@ class Engine(object):
 	def play(self):
 		current_scene = self.scene_map.opening_scene()
 		next_scene_name = ''
-		checkpoint = ''
+		checkpoint = 'current_scene'
 		n_moves = 0
 		while (next_scene_name != 'finished' and self.lives > 0):
 			print ("\n*******************************************************************") #raise ValueError ('todo')
@@ -23,9 +23,13 @@ class Engine(object):
 			if (next_scene_name == ':q'):
 				exit(1)
 			elif (next_scene_name == 'death'):
-				raise ValueError ('todo')
+				checkpoint = 'current_scene'
+                n_moves+=1
+                current_scene=self.scene_map.next_scene(current_scene)
 			elif (next_scene_name == 'died'):
-				raise ValueError ('todo')
+				self.lives-=1
+                current_scene=checkpoint
+                n_moves+=1
 			else:
 				raise ValueError ('todo')
 		if (raise ValueError ('todo')):
