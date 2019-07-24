@@ -19,7 +19,6 @@ class StartingOut(Scene):
 	def enter(self):
 		print ("Another week, another day, another paycheck. As a fisherman in the open Atlantic, you need to venture out to capture more Maine Lobster. "
 			+ "As you traverse the Atlantic, you realize you forgot your lifevest!")
-		raise ValueError ('todo')
 		return self.action()
 		
 		
@@ -41,12 +40,10 @@ class StartingOut(Scene):
 
 		if int(choice) == 1:
 			print ("Good choice! In theory at least... Winds cause your boat to capsize on the way back, and unfortunately you starve to death...")
-			moves+=1
 			return self.exit_scene('death')
 		elif int(choice) == 2:
 			print ("Great! You're able to make more money for your family! Now you have less to worry about!")
-			moves+=1
-			return self.exit_scene('boat_dilemma')
+			return self.exit_scene('boat_dillemma')
 		else:
 			print ("Come on now, that's not an int! Type :q if you want to drop out... but you should type an int (this is a fun game)!")
 			return self.exit_scene(self.name)
@@ -54,9 +51,9 @@ class StartingOut(Scene):
 	def exit_scene(self, outcome):
 		return outcome
 
-class BoatDilemma(Scene):
+class BoatDillema(Scene):
 	
-	name = 'boat_dilemma'
+	name = 'boat_dillemma'
 
 	def enter(self):
 		print ("Oh boy... even though you have that extra cash incoming, you see a storm incoming. You find yourself staring at dark clouds; "
@@ -65,7 +62,6 @@ class BoatDilemma(Scene):
 			+ "Christmas coming, however, you want to buy your family nice gifts; this is only possible if you just continue fishing through the storm. "
 			+ "On one hand, you could take your chances with the ship, risk not giving your daughter a gift for Christmas, or attempt to beat the storm "
 			+ "to shore")
-		raise ValueError ('todo')
 		return self.action()
 
 	def action(self):
@@ -89,16 +85,13 @@ class BoatDilemma(Scene):
 
 		if int(choice) == 1:
 			print ("You radio the ship... unsuccessfully. You attempt to sail towards the ship but your sailboat gets destroyed in a rogue wave...")
-			moves+=1
-			return self.exit_scene('`death') 
+			return self.exit_scene('death') 
 		elif int(choice) == 2:
 			print ("You see the storm coming... unfortunately it capsizes your boat but you are able to deploy your liferaft in time!")
-			moves+=1
 			return self.exit_scene('capsize') 
 		elif int(choice) == 3:
 			print ("As you attempt to race for shore, the inflow of the storm drags you out to sea! You find yourself lost and succumb to the environment.")
-			moves+=1
-			return self.exit_scene('`death') 
+			return self.exit_scene('death') 
 		else:
 			print ("Come on now, that's not an int! Type :q if you want to drop out... but you should type an int (this is a fun game)!") 
 			return self.exit_scene(self.name)
@@ -113,7 +106,6 @@ class Capsize(Scene):
 	def enter(self):
 		print ("You survived! Though you hope you had a lifevest, at least you find yourself alive! As day turns into night, your drenched self starts to "
 			+ "shiver, the beginnings of hypothermia...")
-		raise ValueError ('todo')
 		return self.action()
 		
 		
@@ -135,11 +127,9 @@ class Capsize(Scene):
 
 		if int(choice) == 1:
 			print ("Success! Your body heat kept you just warm enough to survive a night in the open ocean.")
-			moves+=1
 			return self.exit_scene('drinking_problems')
 		elif int(choice) == 2:
 			print ("Didn't you mom teach you this? Never keep wet clothes on or you'll get hypothermia!")
-			moves+=1
 			return self.exit_scene('death')
 		else:
 			print ("Come on now, that's not an int! Type :q if you want to drop out... but you should type an int (this is a fun game)!")
@@ -157,7 +147,6 @@ class DrinkingProblems(Scene):
 			+ "am saved by someone... I just need a bit of water to survive on... and it can't be salty oceanwater... "
 			+ "As you search the tiny liferaft, you find a solar water filter! With a bit of oceanwater, you can turn it into freshwater! "
 			+ "You just need to grab it, however.")
-		raise ValueError ('todo')
 		return self.action()
 
 	def action(self):
@@ -183,16 +172,13 @@ class DrinkingProblems(Scene):
 		if int(choice) == 1:
 			print ("The water is freezing... You throw the solar filter up onto the raft and grab onto the side of the ship... Those arm days" 
 				+ " in the gym really paid off didn't they. You successfully pull yourself up to the side of the ship!")
-			moves+=1
 			return self.exit_scene('food_problems') 
 		elif int(choice) == 2:
 			print ("You continue to stare at it... until you die of dehydration :(")
-			moves+=1
 			return self.exit_scene('death') 
 		elif int(choice) == 3:
 			print ("You reach for it! And you grab it! But you didn't expect to fall in the water. Caught off guard, you unfortunately drown underneath the liferaft...")
-			moves+=1
-			return self.exit_scene('`death') 
+			return self.exit_scene('death') 
 		else:
 			print ("Come on now, that's not an int! Type :q if you want to drop out... but you should type an int (this is a fun game)!") 
 			return self.exit_scene(self.name)
@@ -200,13 +186,14 @@ class DrinkingProblems(Scene):
 	def exit_scene(self, outcome):
 		return outcome
 
-class FoodProblems(Scene)
+class FoodProblems(Scene):
+
+
 	name = 'food_problems'
 
 	def enter(self):
 		print ("Great! You have just enough water to survive on for a while. But even though you are quenched, you find yourself "
 			+ "starving for food. Given that you're in the middle of the ocean, you have very few options... ")
-		raise ValueError ('todo')
 		return self.action()
 
 	def action(self):
@@ -229,11 +216,9 @@ class FoodProblems(Scene)
 
 		if int(choice) == 1:
 			print ("Fool! The shell is preventing you from reaching the meat of the turtle and you starve to death!")
-			moves+=1
 			return self.exit_scene('death') 
 		elif int(choice) == 2:
 			print ("Yum? You eat the fish unwillingly but at least you are able to eat enough so that you're not hungry anymore!")
-			moves+=1
 			return self.exit_scene('com_problems') 
 		else:
 			print ("Come on now, that's not an int! Type :q if you want to drop out... but you should type an int (this is a fun game)!") 
@@ -242,7 +227,7 @@ class FoodProblems(Scene)
 	def exit_scene(self, outcome):
 		return outcome
 
-class ComProblems(Scene)
+class ComProblems(Scene):
 
 	name = 'com_problems'
 
@@ -250,7 +235,6 @@ class ComProblems(Scene)
 		print ("Finally... you see a ship! They can save you(hopefully)! You don't know how far away they are from you, as the ocean's "
 			+ "mirage distorts distance. You're not sure if they can hear your shouts, if their radio is on, or if you can paddle in time."
 			+ "You do know that you only have enough time to make one decision effectively.")
-		raise ValueError ('todo')
 		return self.action()
 
 	def action(self):
@@ -273,22 +257,62 @@ class ComProblems(Scene)
 		   return self.exit_scene(self.name)
 
 		if int(choice) == 1:
-			print ("The water is freezing... You throw the solar filter up onto the raft and grab onto the side of the ship... Those arm days" 
-				+ " in the gym really paid off didn't they. You successfully pull yourself up to the side of the ship!")
-			moves+=1
+			print ("You used your radio skills... but your radio skills can't fix a radio with no batteries, unfortunately")
 			return self.exit_scene('death') 
 		elif int(choice) == 2:
-			print ("You continue to stare at it... until you die of dehydration :(")
-			moves+=1
-			return self.exit_scene('death') 
+			print ("You paddle, and paddle, and paddle, and paddle... AND REACH THE BOAT!")
+			return self.exit_scene('climbing_problems') 
 		elif int(choice) == 3:
-			print ("You reach for it! And you grab it! But you didn't expect to fall in the water. Caught off guard, you unfortunately drown underneath the liferaft...")
-			moves+=1
-			return self.exit_scene('`death') 
+			print ("Screaming for your life can only help so much when the boat is a mile away... they cannot hear you and your last hope is gone.")
+			return self.exit_scene('death') 
 		else:
 			print ("Come on now, that's not an int! Type :q if you want to drop out... but you should type an int (this is a fun game)!") 
 			return self.exit_scene(self.name)
 
 	def exit_scene(self, outcome):
 		return outcome
+
+class ClimbingProblems(Scene):
+
+	name = 'climbing_problems'
+
+	def enter(self):
+		print ("A mile of paddling later... you reach the boat! As you try to get on the boat, you are posed with a decision: use a ladder to climb on "
+			+ " or try to jump?")
+		return self.action()
+
+	def action(self):
+		print ("Choose wisely! This can be your way out!")
+        
+		print("Choice 1: Use a ladder!")
+		print("Choice 2: Jump!")
+        
+        
+		choice = input("Please input an int> ")
+		if choice == ':q':
+			return self.exit_scene(choice)
+		# this is some exception handling, you don't need to worry about it, 
+		# just accept that it works and keeps the program from falling apart.
+		try:
+		   choice = int(choice)
+		except ValueError:
+		   print("That's not an int!")
+		   return self.exit_scene(self.name)
+
+		if int(choice) == 1:
+			print ("You grab onto the ladder and start climbing, but the ladder breaks and lets you fall into the abyss below.")
+			return self.exit_scene('death') 
+		elif int(choice) == 2:
+			print ("You prepare yourself for the jump... and are able to climb on to the boat!!")
+			return self.exit_scene('finished') 
+		else:
+			print ("Come on now, that's not an int! Type :q if you want to drop out... but you should type an int (this is a fun game)!") 
+			return self.exit_scene(self.name)
+
+	def exit_scene(self, outcome):
+		return outcome
+
+class Finale(Scene):
+	name = 'finished'
+
 

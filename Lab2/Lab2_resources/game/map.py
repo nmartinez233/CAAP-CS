@@ -6,12 +6,13 @@ from death import Death
 # you can probably add your own custom maps (as long as they somehow lead to end)?
 class Map(object):
 	scenes = {'starting_out' : S.StartingOut(),
-				'boat_dilemma' : S.BoatDillema(),
+				'boat_dillemma' : S.BoatDillema(),
 				'capsize' : S.Capsize(),
 				'drinking_problems' : S.DrinkingProblems(),
                 'food_problems' : S.FoodProblems(),
                 'com_problems' : S.ComProblems(),
                 'climbing_problems' : S.ClimbingProblems(),
+                'finished' : S.Finale(),
 				'death' : Death()
 				}
 	

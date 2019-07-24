@@ -4,12 +4,13 @@ class Score(object):
 
 	# initializes score and players name
 	def __init__(self, name, score):
-		raise ValueError ('todo')
+		self.name = name
+		self.score = score
 
 	# returns the name associated with score
 	def get_name(self):
-		return name
+		return self.name
 
 	# returns score of player
 	def get_score(self):
-		return score
+		return self.score
