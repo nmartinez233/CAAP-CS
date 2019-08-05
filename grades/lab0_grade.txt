@@ -1,16 +1,23 @@
 Lab 0
 CAAP CMSC 101, Summer 2019
 
-Task 1: 				_/10 points
-Task 2: 				_/5 points
-Task 3: 				_/5 points
-Task 4:					_/5 points
-Task 5:					_/5 points
-Task 6: 				_/5 points
-Task 7: 				_/5 points
-Task 8:					_/5 points
-Task 9:					_/5 points
-Task 10:				_/10 points
-Task 11 (Bonus):		_/0 points
+Task 1: 				8/10 points
+Task 2: 				5/5 points
+Task 3: 				4/5 points
+Task 4:					5/5 points
+Task 5:					4/5 points
+Task 6: 				0/5 points
+Task 7: 				5/5 points
+Task 8:					5/5 points
+Task 9:					5/5 points
+Task 10:				7/10 points
+Task 11 (Bonus):		2/0 points
 
-Total: 					_/60
+Total: 					50/60
+
+Comments:
+	-T1: Readme files missing name and cnet
+	-T3/T5: Some unstaging issues seemed to have happened.
+	-T6: No answer provided
+	-T10: Unstaging issues, make sure no git markup regarding differences/changes is committed.
+	-Make sure to make your task responses clearer and easy to follow (sections, headings, etc.)
