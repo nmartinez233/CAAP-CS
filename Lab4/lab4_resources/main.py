@@ -1,6 +1,6 @@
-# YOUR NAME
-# Assignemnt X
-# Date Due
+# Nathaniel Martinez
+# Lab #4
+# August 4th, 2019
 
 # Imports the turtle graphics module
 import turtle
@@ -47,8 +47,8 @@ def box(intDim):
 
 # Here is an example of how to draw a box using the box function      
 # Comment these two lines out when you draw your own images
-box(boxSize)
-turtle.done()
+#box(boxSize)
+#turtle.done()
  
 # Challenge functions (2 bonus pts each) 
 # def save_image(): # saves the screen to an image/vector file
@@ -77,18 +77,67 @@ turtle.done()
 # and a second with the pixel values (list of lists).
 # The function returns both lists
 def load_art(path):
-    raise NotImplementedError
+    with open(path, "r") as banana:
+        banana_split = banana.read().splitlines()
+        jkcolor = banana_split[0]
+        color = jkcolor.split(",")
+        pixels = banana_split[1:]
+
+    pixel_list = []
+    for line in pixels:
+        sub_list = line.split(",")
+        pixel_list.append(sub_list)
+    return color, pixel_list
+
 
 # This function takes a pallet and pixel list (matrix) to draw the picture
 # You are to write this function
 def draw(pallet, pixels):
-	raise NotImplementedError
+    for line in pixels:
+        for pixel in line:
+            int_pixel = int(pixel)
+            box_color = pallet[int_pixel]
+            file = open("art/charmander.txt")            
+            myPen.color(box_color)
+            box(boxSize)
+            myPen.forward(boxSize)
+        myPen.right(90)
+        myPen.forward(boxSize)
+        myPen.right(90)
+        myPen.forward(boxSize*len(line))
+        myPen.right(180)
 
 # Should give the user a list of the possible drawing pieces you have and ask which one to draw
 # After drawing the piece, ask the if they would like to draw a different piece until they quit the program.
 if __name__ == '__main__':
     # sample for loading art and calling draw
-    pallet_1, pixels_1 = load_art('art/banana.txt')
+    banana = "art/banana.txt"
+    mario = "art/mario.txt"
+    ghost = "art/pacman_ghost.txt"
+    bat = "art/bat.txt"
+    mushroom = "art/mario_mushroom.txt"
+    emoji = "art/happy_emoji.txt"
+    boo = "art/boo.txt"
+    charmander = "art/charmander.txt"
+    image = eval(input("What image do you want?\n 1 - Mario \n 2 - Banana\n 3 - Pacman Ghost" 
+        +"\n 4 - Bat\n 5 - Mario Mushroom\n 6 - Happy Emoji\n 7 - Boo\n 8 - Charmander\n"))
+    if image == 1:
+        pallet_1, pixels_1 = load_art(mario)
+    if image == 2:
+        pallet_1, pixels_1 = load_art(banana)
+    if image == 3:
+        pallet_1, pixels_1 = load_art(ghost)
+    if image == 4:
+        pallet_1, pixels_1 = load_art(bat)
+    if image == 5:
+        pallet_1, pixels_1 = load_art(mushroom)
+    if image == 6:
+        pallet_1, pixels_1 = load_art(emoji)
+    if image == 7:
+        pallet_1, pixels_1 = load_art(boo)
+    if image == 8:
+        pallet_1, pixels_1 = load_art(charmander)
+    turtle.tracer(10)
     draw(pallet_1, pixels_1)
     # You need this to prevent the window from closing after drawing
     turtle.done()
